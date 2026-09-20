@@ -886,6 +886,8 @@ libarchive_test_EXTRA_DIST=\
 	libarchive/test/test_read_format_7zip_archive_properties.7z.uu \
 	libarchive/test/test_read_format_7zip_encryption.7z.uu \
 	libarchive/test/test_read_format_7zip_encryption_header.7z.uu \
+	libarchive/test/test_read_format_7zip_encryption_padding_deflate.7z.uu \
+	libarchive/test/test_read_format_7zip_encryption_padding_lzma2.7z.uu \
 	libarchive/test/test_read_format_7zip_encryption_partially.7z.uu \
 	libarchive/test/test_read_format_7zip_entries_oom.7z.uu \
 	libarchive/test/test_read_format_7zip_folders_oom.7z.uu \
