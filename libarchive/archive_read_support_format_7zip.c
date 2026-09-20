@@ -3796,9 +3796,9 @@ extract_pack_stream(struct archive_read *a, size_t minimum)
 		    zip->uncompressed_buffer_bytes_remaining + 5 >
 		    zip->uncompressed_buffer_size)
 			break;
+		/* A compressed stream can end before the AES padding is consumed. */
 		if (zip->pack_stream_inbytes_remaining == 0 &&
-		    zip->folder_outbytes_remaining == 0 &&
-		    (!zip->is_encrypted || zip->decrypted_bytes_pos >= zip->decrypted_bytes_avail))
+		    zip->folder_outbytes_remaining == 0)
 			break;
 		if (end_of_data || (bytes_in == 0 && bytes_out == 0)) {
 			archive_set_error(&(a->archive),
